@@ -7,6 +7,7 @@ defineProps({
     required: true,
   },
 })
+const { title } = useAppConfig()
 </script>
 
 <template>
@@ -14,7 +15,7 @@ defineProps({
     <BreadcrumbList>
       <BreadcrumbItem>
         <BreadcrumbLink href="/">
-          Sink
+          {{ title }}
         </BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbSeparator />
@@ -23,7 +24,7 @@ defineProps({
           :as="NuxtLink"
           to="/dashboard"
         >
-          Dashboard
+          {{ $t('dashboard.title') }}
         </BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbSeparator />

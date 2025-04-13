@@ -3,20 +3,20 @@ const route = useRoute()
 </script>
 
 <template>
-  <nav class="flex justify-between">
+  <section class="flex justify-between">
     <Tabs
       v-if="route.path !== '/dashboard/link'"
       :default-value="route.path"
       @update:model-value="navigateTo"
     >
       <TabsList>
-        <TabsTrigger value="/dashboard">
-          Analysis
-        </TabsTrigger>
         <TabsTrigger
           value="/dashboard/links"
         >
-          Links
+          {{ $t('nav.links') }}
+        </TabsTrigger>
+        <TabsTrigger value="/dashboard/analysis">
+          {{ $t('nav.analysis') }}
         </TabsTrigger>
       </TabsList>
     </Tabs>
@@ -24,5 +24,5 @@ const route = useRoute()
     <div>
       <slot />
     </div>
-  </nav>
+  </section>
 </template>

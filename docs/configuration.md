@@ -14,6 +14,14 @@ Sets the default length of the generated SLUG.
 
 Redirects default to use HTTP 301 status code, you can set it to `302`/`307`/`308`.
 
+## `NUXT_LINK_CACHE_TTL`
+
+Cache links can speed up access, but setting them too long may result in slow changes taking effect. The default value is 60 seconds.
+
+## `NUXT_REDIRECT_WITH_QUERY`
+
+URL parameters are not carried during link redirection by default and it is not recommended to enable this feature.
+
 ## `NUXT_HOME_URL`
 
 The default Sink homepage is the introduction page, you can replace it with your own website.
@@ -35,3 +43,15 @@ Default prompt:
 ```txt
 You are a URL shortening assistant, please shorten the URL provided by the user into a SLUG. The SLUG information must come from the URL itself, do not make any assumptions. A SLUG is human-readable and should not exceed three words and can be validated using regular expressions {slugRegex} . Only the best one is returned, the format must be JSON reference {"slug": "example-slug"}
 ```
+
+## `NUXT_CASE_SENSITIVE`
+
+Set URL case sensitivity.
+
+## `NUXT_LIST_QUERY_LIMIT`
+
+Set the maximum query data volume for the Metric list.
+
+## `NUXT_DISABLE_BOT_ACCESS_LOG`
+
+Access statistics do not count bot traffic.
